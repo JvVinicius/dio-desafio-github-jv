@@ -1,5 +1,5 @@
 ##Comandos Git 
 #git commit -m = adicionar comentário ao commit.
-#git push origin main = enviar para nuvem do github.
+#git push origin main = enviar todos os commits para nuvem do github.
 #git add . = enviar pasta para controle de versão, comitar.
 #git status = vê o status do arquivo.
