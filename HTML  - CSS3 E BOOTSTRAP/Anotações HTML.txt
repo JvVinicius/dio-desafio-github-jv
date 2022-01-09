@@ -1,0 +1,32 @@
+Tags para Textos
+
+<h1>Titulo da página</h1>
+<h2>Titulo de seção</h2>
+<h3>Titulo de artigo</h3>
+<p>Conteúdo do artigo.</p>
+
+Textos e Links
+
+<a>Link</a>
+<a href="linkedin.com/in/vinicius">Linkedln</a>
+<a href=!mailto:jvviniciusalbuquerque@gmail.com">E-mail</a>
+<a target="_blank">Link</a>
+
+Tags Imagens 
+
+<img>
+<img src="img/avatar.jpg">
+<img alt="Foto de Vinícius">
+tinypng.com = site para otimizar algumas imagens.
+
+Listas 
+
+<ul> = ordem dos itens não são importante.
+item 1
+item 2
+
+<ol> = ordem dos itens são importante.
+1. item 1
+2. item 3
+
+<li> = é o item da lista.
