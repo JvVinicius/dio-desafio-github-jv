@@ -1,0 +1,18 @@
+
+.navbar {
+    background-color: red;
+}
+
+.quemsomos {
+    background-color: black;
+    color: white;
+}
+
+.margin {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.nav-link {
+    color: white;
+}
