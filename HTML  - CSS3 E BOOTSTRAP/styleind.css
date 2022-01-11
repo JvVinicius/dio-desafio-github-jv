@@ -1,18 +1,32 @@
 
+body {
+    font: 20px Arial, sans-serif;
+}
 .navbar {
-    background-color: red;
+    background-color: white;
 }
 
 .quemsomos {
     background-color: black;
     color: white;
+    font-style: italic;
+}
+
+.imgmargin {
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .margin {
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .nav-link {
-    color: white;
+    color: black;
+}
+
+.parc {
+    background: red;
+    color: black;
 }
