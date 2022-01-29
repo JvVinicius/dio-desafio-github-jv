@@ -1,23 +1,23 @@
-Introduçao a CSS3
+# Introduçao a CSS3
 
-font-family: alterar a fonte do texto
-font-size: altera o tamanho do texto
-font-style: altera a aparência do texto
-font-weight: altera o peso do texto -> normal / bold(negrito)
-text-trasnform: altera o texto em maiuscula e minuscula
-	uppercase, lowercase e capitalize(primeiras letras maiusculas)
-text-decoration: destacar algum texto
-	undeline, overline e line-trought.
+	font-family: alterar a fonte do texto
+	font-size: altera o tamanho do texto
+	font-style: altera a aparência do texto
+	font-weight: altera o peso do texto -> normal / bold(negrito)
+	text-trasnform: altera o texto em maiuscula e minuscula
+		uppercase, lowercase e capitalize(primeiras letras maiusculas)
+	text-decoration: destacar algum texto
+		undeline, overline e line-trought.
 
 
-Dimensão e Alinhamento
+# Dimensão e Alinhamento
 
-width - largura
-height - altura
+	width - largura
+	height - altura
 
-max-width - largura máxima
-max-height - altura máxima
+	max-width - largura máxima
+	max-height - altura máxima
 
-margin - espaçamento entre elementos
+	margin - espaçamento entre elementos
 
-text align - alinhar textos
+	text align - alinhar textos

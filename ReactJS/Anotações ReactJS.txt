@@ -1,0 +1,206 @@
+# Maneiras de Estilização
+  - Inline
+    const divStyle = {
+      color: 'blue',
+      backgroundImage: 'url('+ imgUrl + ')
+    };
+    function HelloWorldComponent () {
+      return <div style={divStyle}>Hello World!</div>;
+    }
+
+    function App(){
+      return (
+        <HelloWorld style={{ marginTop: '10px' }} />
+      )
+    }
+    . Prós 
+        Maneira mais prática e direta
+        Ajustes Rapidos
+        Testes de Estilo
+    . Contras
+        Dificl Manutenção 
+  
+  - Classes 
+    .div-style {
+      color: blue;
+      background: url('https://bit.ly/2L8xxHz');
+    }
+
+    import './HelloWorldComponent.css';
+    
+    function HelloWorldComponent(){
+      return <div className='div-style'>Hello World!</div>
+    }
+
+    . Em JSX, define-se classes pelo atributo className 
+        Maneira mais prática e direta
+    . Contras
+        Dificil Manutenção
+        Pouca Flexibilidade
+        Conflitos com nomes
+
+  - CSS in JS
+    npm install --save styled-components
+    const DivStyle = styled.div'
+      color: blue;
+      background: url(`${props => props.imageUrl}`);
+    ';
+
+    function HelloWorldComponent() {
+      const url = 'https://bit.ly/2L8xxHz';
+      return <DivStyle imageUrl={url}>Hello World</DivStyle>;
+    }
+
+    . Manutenção 
+        Facilidade para remover CSS
+        Estilos Dinâmicos
+    . Performance
+    . injeção automatica de prefixos vendor
+
+# Stateful VS Stateless
+
+  - Stateful: usa estados
+    . Possui gerenciamento de estados no componente.
+    . Construidos usando classes em JS
+    Cliclo de vida: Initialization -> Mounting -> Updation -> Unmounting 
+  - Stateless: não usa estados
+    . Não possui gerenciamento de estado no componente.
+    . Construidos usando funções em JS
+
+  - A Nomenclatura foi atualizada
+    Class Components
+    Function Components
+  - Com hooks, estados são manipulaveis em function components!
+
+# Formulários
+  - Mantem um estado interno
+    <form>
+      <label>
+        Nome:
+        <input type="text' name="nome" />
+      </label>
+      <input type="submit" value="Enviar" />
+    </form>
+  - Em HTML, <input>, <textarea> e <select> tem um estado interno.
+  - Em React, podemos controlar o estado: state e setState
+  . Componente Controlado
+      Tanto select, input ou textarea aceitam um atributo value
+      Podemos mudar esse valor usando um atributo onChange
+  . Componente não-Controlado
+      A tag input é read-only
+  - Bibliotecas:
+      Formik
+      Redux-forms 
+
+# Flux 
+  - é um padrao de projeto para trafego de dados de maneira unidirecional.
+  - Action: é como um telegrafo, ele formata a mensagem a ser enviada.
+  - Dispatcher: é como um telefonista, ele sabe todos os callbacks para diferentes stores.
+  - Store: é como um gerente supert controlador, ele guarda a informação e todas as alterações tem que ser feitas por ele mesmo, mais ninguem.
+  - View: é como um gerente intermediario(middleware) que recebe as notificações da store e passa os dados para as visões abaixo dela.
+
+  - Diversas Implementações
+      Redux (Mais popular)
+      Reflux
+      Mobx
+      Vuex (baseada em Redux e Elm)
+      NgRx/store (baseada em Redux e RxJS)
+
+  - Bibliotecas baseadas em Flux
+      Servem para comunicação entre componentes
+      Centralizam a informação
+      Flux Libraries são como oculos: você irá saber quando deverá usar elas.
+
+# Redux 
+  - é uma implementação de flux.
+  - 3 Principios:
+      Uma unica store
+      State é read-only
+      Mudanças são feitas com pure functions
+  
+  Em Redux:
+    .Action 
+      -Actions são como o flux 
+      -Diferença: Actions não enviam a action em si para o dispatcher
+      -Retornam um objeto de action formatado
+    .Store
+      -Em flux: diversas stores
+      -Em Redux: uma única store
+      -A Store aqui cuida de toda a arvore de estados
+      -Os Reducers que cuidam de descobrir qual estado muda.
+    .Reducers
+      -Em Redux não ha dispatcher (simplifica e divide o trabalho da store)
+      -A Store se conecta ao root reducer, que divide os estados em pequneos reducers para descobrir como lidar com esse estado.
+      -Os estados aqui são imutaveis.
+    .Views
+      -Em React, adiciona na camada de view 3 novos conceitos para conectar a view a store:
+        1. Provider
+        2. connect()
+        3. selector
+
+# Rest HTTP com React
+  - APIs HTTP 
+      .Servem para conectar a um ou mais servidotes HTTP
+          .GET 
+          .POST 
+          .DELETE 
+          .PUT
+      .Fetch API 
+          .Nativa do Browser
+          .Oferece uma alternativa ao XMLHttpRequest() e jQuery.ajax()
+          .Suporte a Service Workers
+          .Algumas Diferenças:
+              .Não envia nem recebe cookies(precisa definir a opção credentials)
+              .Não rejeita a status do erro HTTP
+      .Axios
+          .Lib de HTTP API
+          .Cross-Browser
+          .Pode monitorar o progresso de um XMLHttpRequest
+          .Melhor tratamento de erros
+          .Melhor testes 
+
+# Imutabilidade e Redux
+  - Imutabilidade 
+      .Uma vez criada, uma coleção não pode ser alterada.
+      .Novas coleções podem ser criadas a partir de uma coleção anterior e uma mutação(setter) como um conjunto.
+      .Novas coleções são criadas usando o máximo possivel da estrutura original, reduzindo a cópia e aumentando a performance.
+    .Beneficios:
+      .Performance
+      .Programação mais simples
+      .Debugging mais simples(detecção de mudanças)
+
+  - Imutabilidade e React
+      .Se voce que performance em React, use dados imutaveis.
+      .Voce consegue usando shouldComponentUpdate ou React.PureComponent
+  
+  - Immutable.js 
+      .Biblioteca que fornece coleções persistentes e imutaveis
+      .Permite detecção barata de alterações nos objetos
+    
+    - Outras Libs:
+        .Immer
+        .Immutability-helper 
+        .Seamless-immutable
+
+  - Imutabilidade é pre requisito no Redux 
+      .Redux e React-Redux utilizam comparações rasas
+      .Manipulação de dados mais segura
+      .Time-travel Debugging
+      .Os Reducers dividem o objeto de estados em dominios por uma chave;
+      .combineReducers checa mudanças usando comparação rasa
+        1.Fazem a interação nos reducers.
+        2.Criam um novo objeto de estados a partir dos estados retornados por cada reducer.
+      .connect gera componentes que fazem comparação rasa com o estado root
+      .Retornam o valor para a função mapStateToProps, verificando aqueles que precisam de um operação de re-render.
+
+# Redux + Rest
+  - Suponha um sistema de notificação ou um sistema de logging
+  - Voce precisa manter a sincronia, independente da tela onde estiver
+  - Uma maneira de resolver facil seria armazenar os dados do serviço no Redux.
+
+  - Redux Middlewares
+      .Provê uma camada entre o disparo de uma ação e o momento que ela atinge o reducer.
+      .Utilizados para uma variedades funções, entre elas chamadas de APIs de serviço.
+      .Os mais usados:
+          .redux-thunk: Um thunk é uma função que chama outra função.
+          .redux-saga

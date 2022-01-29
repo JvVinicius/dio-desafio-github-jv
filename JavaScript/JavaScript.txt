@@ -1,0 +1,304 @@
+#Introdução a JavaScript
+ . Linguagem interpretada - significa que roda em tempo real
+código disponibilizado instantaneamente.
+ . Baseada em Protótipos
+ . Multiparadigma
+ . Comumente utilizada em aplicações web client-slide
+ . Segue o padrão ECMAScript
+
+#Evolução
+ . ECMAScript 1 à ECMAScript 6
+
+#Aplicações
+ . Web
+ . Mobile
+ . Smartwatches
+ . Games
+ . Internet of Things
+ . APIs
+
+#DOM - Document Object Models
+ . Estrutura dos elementos dentro da janela
+
+#Frameworks
+ . VueJS
+ . Angular
+ . React
+ . JQuery
+
+#Sites que podem ajudar
+ . MDN Web Docs moz://a
+ . W3C
+ . stackoverflow
+
+#O que é JS?
+ . é uma linguagem de programação em alto nível, que integra o
+desenvolvimento de apps e página web.
+ . Surgiu em 1995 por Brendan Eich
+ . Criar scripts dinâmicos que realizam a interação de apps
+ou páginas web.
+
+#Tipagem JS
+ . Funciona como regra de uso de dados.
+ . Valores tipos de variaveis: Boleano, String, null, 
+indefinidos, numeros, array, object, function.
+
+ . Declaração de Variaveis
+   - var: escopo global
+   - let: escopo local
+   - const: valor fixo/somente leitura/não pode ser alterado.
+ . Escopo
+   - global: é declarada fora de qualquer bloco, visibilidade
+disponivel em todo código.
+   - local: é declarada dentro de um bloco,  visbilidade
+pode ficar disponivel ou não.
+
+# Operadores Lógicos
+ . && = "e"
+ . || = "ou"
+ . ! = "não"
+
+# Arrays são tipo de lista, vetor ou matriz pode obter varios
+tipos de variaveis.
+ . Manipulando Arrays
+   - forEach() - itera um array;
+   - push() - add item no final do array;
+   - pop() - remove item no final do array;
+   - shift() - remove item no inicio do array;
+   - unshift() - add item no inicio do array;
+   - indexOf() - retorna o indice de um valor;
+   - splice() - remove ou substitui um item pelo indice;
+   - slice() - retorna uma parte de um array existente.
+
+#Objetos - Dados que possuem propriedades e valores que
+definem suas caracteristicas, deve ser declarado entre chaves{}
+ . Manipulando objetos
+   - as propriedades podem ser atribuidas à variaveis,
+facilitando a manipulação do objeto.
+  Ex: var xicara = {propriedade do objeto} ou
+      var {propriedade} = xicara
+
+# Estruturas condicionais
+ . intruções para realizar determinada tarefas a partir de
+uma condição, seja decisão ou repetição.
+   - if = "se" / ninho de if = if dentro de outro.
+   - else = "se não"
+   - else if = caso haja mais de uma condição
+   - if ternário = verificação em uma única linha 
+obs: semre usar a "?" e dois pontos ":"
+   - switch/case = funciona como uma estrutura condicional
+break = parar a função.
+
+# Laços de Repetição 
+ . For = executa uma instrução até que ela seja falsa.
+<for ([expressaoInicial]; [condição]; [incremento]) {declaração}>
+ . For/in = uma repetição a partir de uma propriedade.
+<for ([indice] in [objeto ou array]) {declaração}>
+ . For/of = repetição a partir de um valor.
+<for ([indice] of [array]) {declaração}
+ . while = executa uma instrução enquanto determinada condição
+for verdadeira, a verificação feita antes da execução.
+Ex: var a = 0;
+    while (a<10) { a++; console.log(a); }
+ . Do/while = executa até que determinada condição seja falsa
+a verificação é feita depois da execução.
+Ex: var a = 0;
+    do { a++; console.log(a); } while (a<10)
+
+# Funções e suas particularidades
+ . bloco de comandos e intruções para execução de tarefas.
+Ex: function funcao1() { 
+      console.log(imprimir isso!) }
+    funcao1();
+ . () - indica que é um objeto do tipo function;
+ . {} - indica que é um bloco de instrução.
+
+# Funções com parametros
+ . podem receber em sua declaração, parametros, que servem
+como variaveis, onde sua atribuição pode ser feita durante a
+chamada função.
+Ex: function nomeDaFuncao (parametro) { instrução }
+	nomeDaFuncao (valor do parametro);
+ . Variaveis criada dentro da função, funciona apenas no escopo
+da função.
+ . Uma variavel pode armazenar um função.
+ . Função Autoinvocavel - uma função anonima entre parenteses, seguida
+por outro par de parenteses que representa sua chamada. tambem pode ser utilizada com parametros ou armazenada em uma variavel.
+ . Callbacks - uma função passada como argumento para outra.
+ . This - é uma referencia de contexto. Seu valor pode mudar de acordo com o lugar no codigo onde foi chamada.
+      em um objeto - proprio objeto dono do metodo
+      sozinha - objeto global (em navegadores, window)
+      função - objeto global
+      evento - elemento que recebeu o evento
+   - Call - chama a variavel representando valor do "This".
+   - Aplly - utiliza [] para declarar valor.
+   - Bind - clona a estrutura da função onde é chamada e aplica o valor do objeto passado como parametro. 
+
+# Parametros
+ . Objeto 'arguments' - um array com todos os parametros passados quando
+a função foi invocada.
+
+# Arrays
+ . Spread - uma forma de lidar separadamente com elementos. o que era parte de um array se torna um elemento indepedente.
+ . Rest - combina os argumentos em um array. o que era um elemento independete se torna um array.
+
+# Objeto
+ . Object Destructuring - entre chaves podemos filtrar os dados que nos interessam em um objeto.
+
+# Tipos de Funções
+ . Declarativas - possuem o uso mais comum, obrigatorio nome
+da função.
+ . Expressões de Funções - atribuidas a expressões, nomeação
+opcional.
+ . Arrow Function - expressão de sintaxe curta, sempre serão
+anonimas, não podem ser nomeadas.
+EX: var funcao = () => { ${instrucao}; }
+
+# Métodos nativos
+ . Number() - para converter valores em números;
+ . Prompt() - para registrar entradas de usuário;
+ . Alert() - para mostrar mensagem ao usuário;
+ . Template Strings - para usar strings junto com expressões.
+
+# Operadores
+ . Atribuição - "=", "+=", "*=", "/=", "%=".
+ . "**" Exponencial, "++" Incrementar, "--" Decrementar
+ - Comparação
+  . "==" Igual a
+  . "===" Mesmo Valor e mesmo tipo
+  . "!=" Diferente
+  . "!==" Valor e Tipos Diferentes
+
+# Palindromo - palavra ou frase que se pode ler, indiferentemente,
+da esquerda para direita ou vice-versa.
+
+# Arrow Function
+ . Sintaxe - const helloworld = () => "Hello World"; ou const helloworld =() => { return "Hello World" }
+   - caso exista apenas uma linha, pode dispensar as chaves e o return.
+   - caso exista apenas um parametro, pode dispensar os parenteses.
+   - NÃO FAZ HOISTING!
+   - 'this' sempre sera o objeto global. metodos para modificar seu valor nao ira funcionar;
+   - não existe o objeto 'arguments';
+   - o construtur (ex: new MeuObjeto()) tambem nao pode ser utilizado.
+
+# Coleções Chaveadas
+ . Map - 
+   - Cria um novo array, nao modifica o array original.
+   - Uma coleção de arrays no formato [chave, valor];
+   - Pode ser iterado por um loop for...
+   - myMap.set = adicionar
+   - myMap.get = ler
+   - myMap.delete = deletar
+   - Podem ter chaves de qualquer tipo;
+   - possuem a propriedade length;
+   - são mais faceis de iterar;
+   - utilizado quando o valor das chaves é desconhecido;
+   - os valores tem o mesmo tipo.
+ . Set -
+   - São estruturas que armazenam valores únicos.
+   - mySet.add
+   - mySet.has
+   - mySet.delete
+   - em vez da propriedade length, consulta-se o numero de registros pela propriedade size;
+   - não possui os metodos map, filter, reduce etc.
+ . forEach vs Map - 
+   - valor de retorno, considere se precisa de um array auxiliar para fazer as operações.
+   
+   . Filter -
+      - Cria um novo array, nao modifica o array original
+      - parametros: array.filter(callback, thisArg)
+      - callback: função a ser utilizada em cada elemento.
+   . Reduce - 
+      - executa uma função em todos os elementos do array, retornando um valor unico.
+      - array.reduce(callbackFn, initialValue)
+      - callback: função a ser executada a partir do acumulador.
+      - initialValue: valor sobre o qual o retorno final ira atuar.
+      - accumulator: acumulador de todas as chamadas de callbackFn.
+      - cuurentValue: elemento atual sendo acessado pela função.
+
+# Tipos de Erros
+   . ECMAScript Error - Erros que ocorrem em tempo de execução.
+composto por mensagem, nome, linha, call stack.
+   . DOMException - erros relacionados ao document object model(DOM).
+   . Throw - palavra reservada que indica um erro.
+   . Try...catch 
+   . Finally 
+
+# Assincrono
+   . Que não ocorre ou não se efetiva ao mesmo tempo.
+   - Promises - Objeto de processamento assicrono.
+      - inicialmente , seu valor é desconhecido. ela pode, então, ser resolvida ou rejeitada. 
+      - 3 Estados: Pendente, Resolvida ou rejeitada.
+      - Estrutura/Manipulação:
+         const myPromise = new Promise ((resolve, reject) => {
+            window.setTimeout (() => {
+               resolve (console.log('Resolvida!'));
+            }, 2000);
+         });
+         await myPromise
+               .then ((result) => result + 'passando pelo then')
+               .then ((result) => result + 'e agora acabou!')
+               .catch ((err) => console.log(err.message));
+         obs: Após 2 segundos, retornara o valor: "Resolvida passando pelo then e agora acabou!"
+      - Async/await: Funções assincronas precisam dessas duas palavras chave.
+         . Funções assincronas tambem retornam promises!
+   - APIs - Application Programming Interface
+      . é uma forma de intermediar os resultados do back-end com o que é apresentado no front-end. Consegue acessa-la por meio de URLs.
+   - JSON - JavaScript Object Notation
+      . é muito comum que APIs retornem seus dados no formato .json, portanto precisamos tratar esses dados quando os recebermos.
+   - Fetch - Consumindo APIs
+      fetch(url, options)
+         .then(response => response.json())
+         .then(json => console.log(json))
+      // Retorna uma promise.
+      . Operações no banco (POST, GET, PUT, DELETE, etc)
+
+# Orientação a Objetos
+   . Paradigmas 
+      - imperativo - Orientação a objeto
+      - Declarativo - Database
+   . São objetos que possuem uma série de propriedades.
+      - Pilares: 
+         - Abstração: Processo mental que consiste isolar um aspecto determinado de um estado de coisas relativamente complexo, a fim de simplificar a sua avaliação.
+         - Herança: Objeto filho herda propriedades e metodos do objeto pai.
+         - Encapsulamento: Cada classe tem propriedades e metodos independetes do restante do codigo.
+         - Polimorfismo: Podem herdar a mesma classe pai, mas se comportarem de forma diferente quando invocamos seus metodos.
+   . OOJS (Orientação a objetos em javascript)
+      - Prototipos: todos os objetos javascript heram propriedades e metodos de uma prototype. o objeto object.prototype esta no topo desta cadeia.
+      - Classes:
+         - Syntatic sugar: uma sintaxew feita para facilitar a escrita.
+         - javascript nao possui classes nativamente. todas as classes sao objetos e a herança se da por prototipos.
+
+# Manipulando o DOM 
+   . Document Object Model - o DOM é um padrao de como acessar e modificar os elementos HTML de uma página.
+      - Seleciona os elementos de uma página: 
+         document.getElementById(element)
+         document.getElementsByTagName(element)
+         document.getElementsByClassName(element)
+         document.querySelectorAll(element)
+      - document.createElement(element) - Cria um novo elemento HTML
+      - document.removeChild(element) - Remove um elemento
+      - document.appendChild(element) - Adiciona um elemento
+      - document.replaceChild(new, old) - Substitui um elemento
+   . Estilos
+      - element.classList.add(novo estilo)
+      - element.classList.remove(nome da classe)
+      - element.classList.toggle('dark-mode') - adiciona a classe dark-mode caso ela nao faça parte/ lista e remove caso faça parte.
+   . Eventos
+      - Tipos:
+         mouseover, mouseout - de Mouse
+         click, dbclick - de Click
+         Change, load - de Atualização
+      - Event listener 
+         Diretamente no JS, cria um evento que vai ser acionado no momento em que o usuario realizar determinada ação.
+         . const botao = document.getElementById('meuBotao");
+         . botao.addEventListener('click', outraFuncao);
+      - Atributo HTML 
+         Especifica a função a ser chamada diretamente no elemento HTML.
+         .  <h1 onclick='mudaTexto(this)') Clique aqui!</h1>
+            <scripr>
+               function mudaTexto(id) {
+                  id.innerHTML = 'Mudei!';
+               }
+            </script>
+   . BOM - Browser Object Model - tudo que está dentro do objeto window.
